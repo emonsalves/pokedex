@@ -1,0 +1,27 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+#container {
+  text-align: center;
+  padding: 0px 40px;
+  background-image: url("../img/pokedex.png");
+  background-repeat: no-repeat;
+  justify-content: center;
+}
+
+.pokemon {
+  width: 75%;
+}
+
+#img-pokemon {
+  width: 25%;
+}
+
+#btn-buscar {
+  padding: 1rem;
+}
+
+/*# sourceMappingURL=style.css.map */
