@@ -4,24 +4,33 @@
   box-sizing: border-box;
 }
 
-#container {
-  text-align: center;
-  padding: 0px 40px;
-  background-image: url("../img/pokedex.png");
-  background-repeat: no-repeat;
+.container {
+  display: flex;
   justify-content: center;
+  align-items: center;
+  background-color: black;
 }
 
-.pokemon {
-  width: 75%;
+#pokedex {
+  min-height: 100vh;
+  min-width: 100vw;
+  /* background-image: url("../img/pokedex.png"); */
+  background-position: center;
+  background-repeat: no-repeat;
+  display: grid;
+  grid-template-areas: "header header" "body body" "footer footer";
 }
 
-#img-pokemon {
-  width: 25%;
+.poke-header {
+  grid-area: header;
 }
 
-#btn-buscar {
-  padding: 1rem;
+.poke-body {
+  grid-area: body;
+}
+
+.poke-footer {
+  grid-area: footer;
 }
 
 /*# sourceMappingURL=style.css.map */

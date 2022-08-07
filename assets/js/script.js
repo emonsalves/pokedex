@@ -21,16 +21,16 @@ const arrayPokemons = getPokemons();
 const renderPokemon = async (pokemonBuscado) => {
     const resApi = await fetch(`${urlApi}${pokemonBuscado}`);
     const data = await resApi.json();
-    console.log(data);
+    // console.log(data);
     const ataques = [];
     data.moves.forEach((ataque) => ataques.push(ataque.move.name));
-    // console.table(ataques);  
+    // console.table(ataques); 
     const estados = [];
     data.stats.forEach((status) => estados.push({ estado: status.stat.name, valor: status.base_stat }));
-    console.table(estados);
-    // const tipo = data.types[0].type.name;
+    // console.table(estados);
+    const tipo = data.types[0].type.name;
     // console.log(tipo);
-    // const urlImgPokemon = data.sprites.front_default;
+    const urlImgPokemon = data.sprites.front_default;
     let html = `<div class="pokemon">
     <h1>${data.name.toUpperCase()}</h1>
     <h2>Numero: ${data.id}</h2>
@@ -45,8 +45,8 @@ const renderPokemon = async (pokemonBuscado) => {
     </div>
      `;
     console.log(html);
-    boxPokemon.innerHTML = html;
+    // boxPokemon.innerHTML = html;
   
 }
 
-const pokemon = renderPokemon(25);
+const pokemon = renderPokemon(15);

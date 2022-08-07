@@ -1,10 +1,41 @@
+$colorBgk: black;
+
 * {
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
+
 }
 
-.container{
-    min-width: 100vh;
-    background-color: green;
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $colorBgk;
+}
+
+
+#pokedex {
+    min-height: 100vh;
+    min-width: 100vw;
+    background-image: url("../img/pokedex.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    display: grid;
+    grid-template-areas: 
+    "header header"
+    "body body"
+    "footer footer"
+    ;
+
+}
+
+.poke-header{
+    grid-area: header;
+}
+.poke-body {
+    grid-area: body;
+}
+.poke-footer {
+    grid-area: footer;
 }
